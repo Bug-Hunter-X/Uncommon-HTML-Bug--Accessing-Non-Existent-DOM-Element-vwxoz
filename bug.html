@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Attempting to access a non-existent element before it's added to the DOM
+    document.getElementById("myDiv").innerHTML = "This will cause an error!"; 
+    // Correct way to append after creating the element
+    // document.getElementById("myDiv").appendChild(document.createTextNode("This is correct."));
+  </script>
+</body>
+</html>
